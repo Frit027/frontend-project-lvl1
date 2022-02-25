@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Frit027/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Frit027/frontend-project-lvl1/actions)",
+  "description": "Educational project of the course on Hexlet",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/Frit027/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Frit027",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Frit027/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/Frit027/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/Frit027/frontend-project-lvl1#readme",
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
 }
