@@ -1,0 +1,15 @@
+name: lint-check
+
+on:
+  - push
+  - pull_request
+
+env:
+  CI: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: make install
+      - run: make lint
