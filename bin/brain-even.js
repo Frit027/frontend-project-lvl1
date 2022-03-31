@@ -1,34 +1,22 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import greeting from '../src/cli.js';
+import { isEqual, showMessage, getRandomInteger } from '../src/index.js';
 
-const greeting = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
-
-const randomInteger = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
-
-const game = () => {
+(function () {
   const userName = greeting();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const randomInt = randomInteger(1, 1000);
+    const randomInt = getRandomInteger(1, 100);
     console.log(`Question: ${randomInt}`);
 
     const answer = readlineSync.question('Your answer: ');
     const correctAnswer = randomInt % 2 ? 'no' : 'yes';
+    const result = isEqual(answer, correctAnswer);
 
-    if (String(answer) === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
-      return;
-    }
+    showMessage(result, userName, answer, correctAnswer);
+    if (!result) return;
   }
   console.log(`Congratulations, ${userName}!`);
-};
-
-game();
+}());
