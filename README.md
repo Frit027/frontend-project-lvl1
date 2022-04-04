@@ -4,5 +4,7 @@
 [![Actions Status](https://github.com/Frit027/frontend-project-lvl1/workflows/lint-check/badge.svg)](https://github.com/Frit027/frontend-project-lvl1/actions/workflows/lint-check.yml)
 
 # Демонстрация
-1. Видео ([ссылка](https://drive.google.com/file/d/1SYo-L2yxF4_oUoUPyyN2MhNrsrF-YGg7/view?usp=sharing) на Google Диск) с примером игры "Проверка на чётность".
-2. Видео ([ссылка](https://drive.google.com/file/d/1tpVpi2bZ-eD9ZKvdxAdAz2yCm6HeALMy/view?usp=sharing) на Google Диск) с примером игры "Калькулятор".
+Ссылки на видео с примером прохождения каждой из игр:
+1. Игра ["Проверка на чётность"](https://drive.google.com/file/d/1SYo-L2yxF4_oUoUPyyN2MhNrsrF-YGg7/view?usp=sharing).
+2. Игра ["Калькулятор"](https://drive.google.com/file/d/1tpVpi2bZ-eD9ZKvdxAdAz2yCm6HeALMy/view?usp=sharing).
+3. Игра ["НОД"](https://drive.google.com/file/d/1cKAwqtl7GRNV2VrLoxwUZAA1gWYb8tJK/view?usp=sharing).
