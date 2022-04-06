@@ -5,6 +5,7 @@ import GCDGame from './games/brain-gcd.js';
 import progressionGame from './games/brain-progression.js';
 import greeting from './cli.js';
 import showTaskText from './task-text.js';
+import { countRounds, typeGames } from './constants.js';
 
 const isEqual = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
 
@@ -19,18 +20,18 @@ export default (type) => {
   let correctAnswer;
 
   showTaskText(type);
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < countRounds; i += 1) {
     switch (type) {
-      case 'EVEN':
+      case typeGames.EVEN:
         [expression, correctAnswer] = evenGame();
         break;
-      case 'CALC':
+      case typeGames.CALC:
         [expression, correctAnswer] = calcGame();
         break;
-      case 'GCD':
+      case typeGames.GCD:
         [expression, correctAnswer] = GCDGame();
         break;
-      case 'PROGRESSION':
+      case typeGames.PROGRESSION:
         [expression, correctAnswer] = progressionGame();
         break;
       default:
