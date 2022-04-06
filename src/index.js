@@ -1,16 +1,12 @@
 import readlineSync from 'readline-sync';
-import isEven from './games/brain-even.js';
-import getResult from './games/brain-calc.js';
-import getGCD from './games/brain-gcd.js';
+import evenGame from './games/brain-even.js';
+import calcGame from './games/brain-calc.js';
+import GCDGame from './games/brain-gcd.js';
+import progressionGame from './games/brain-progression.js';
 import greeting from './cli.js';
+import showTaskText from './task-text.js';
 
 const isEqual = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
-
-const getRandomInteger = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
-
-const getRandomOperator = () => ['+', '-', '*'][getRandomInteger(0, 2)];
-
-const showTaskText = (text) => console.log(text);
 
 const showMessage = (result, userName, userAnswer, correctAnswer) => {
   if (result) console.log('Correct!');
@@ -22,24 +18,20 @@ export default (type) => {
   let expression;
   let correctAnswer;
 
+  showTaskText(type);
   for (let i = 0; i < 3; i += 1) {
     switch (type) {
       case 'EVEN':
-        showTaskText('Answer "yes" if the number is even, otherwise answer "no".');
-        expression = getRandomInteger(1, 100);
-        correctAnswer = isEven(expression);
+        [expression, correctAnswer] = evenGame();
         break;
       case 'CALC':
-        showTaskText('What is the result of the expression?');
-        expression = `${getRandomInteger(1, 100)} ${getRandomOperator()} ${getRandomInteger(1, 100)}`;
-        correctAnswer = getResult(expression);
+        [expression, correctAnswer] = calcGame();
         break;
       case 'GCD':
-        showTaskText('Find the greatest common divisor of given numbers.');
-        expression = `${getRandomInteger(1, 100)} ${getRandomInteger(1, 100)}`;
-        correctAnswer = getGCD(...expression
-          .split(' ')
-          .map((num) => Number(num))).toString();
+        [expression, correctAnswer] = GCDGame();
+        break;
+      case 'PROGRESSION':
+        [expression, correctAnswer] = progressionGame();
         break;
       default:
         return;
