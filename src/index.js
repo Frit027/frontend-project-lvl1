@@ -3,6 +3,7 @@ import evenGame from './games/brain-even.js';
 import calcGame from './games/brain-calc.js';
 import GCDGame from './games/brain-gcd.js';
 import progressionGame from './games/brain-progression.js';
+import primeGame from './games/brain-prime.js';
 import greeting from './cli.js';
 import showTaskText from './task-text.js';
 import { countRounds, typeGames } from './constants.js';
@@ -33,6 +34,9 @@ export default (type) => {
         break;
       case typeGames.PROGRESSION:
         [expression, correctAnswer] = progressionGame();
+        break;
+      case typeGames.PRIME:
+        [expression, correctAnswer] = primeGame();
         break;
       default:
         return;
