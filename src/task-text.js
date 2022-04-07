@@ -14,6 +14,9 @@ export default (type) => {
     case typeGames.PROGRESSION:
       console.log('What number is missing in the progression?');
       break;
+    case typeGames.PRIME:
+      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+      break;
     default:
   }
 };
