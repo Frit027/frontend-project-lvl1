@@ -1,9 +1,10 @@
 import getRandomNumber from '../random-number.js';
+import { progression } from '../constants.js';
 
 export default () => {
-  const d = getRandomNumber(1, 10);
-  const firstNumber = getRandomNumber(1, 15);
-  const length = getRandomNumber(5, 10);
+  const d = getRandomNumber(progression.dStart, progression.dEnd);
+  const firstNumber = getRandomNumber(progression.firstNumberStart, progression.firstNumberEnd);
+  const length = getRandomNumber(progression.lengthStart, progression.lengthStart);
   const randomIndex = getRandomNumber(0, length - 1);
 
   const arr = [...Array(length).keys()].map((x) => (x * d) + firstNumber);
