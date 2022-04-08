@@ -6,22 +6,16 @@ import progressionGame from './games/brain-progression.js';
 import primeGame from './games/brain-prime.js';
 import greeting from './cli.js';
 import showTaskText from './task-text.js';
-import { countRounds, typeGames } from './constants.js';
-
-const isEqual = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
-
-const showMessage = (result, userName, userAnswer, correctAnswer) => {
-  if (result) console.log('Correct!');
-  else console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
-};
+import { numbers, typeGames } from './constants.js';
 
 export default (type) => {
   const userName = greeting();
-  let expression;
-  let correctAnswer;
 
   showTaskText(type);
-  for (let i = 0; i < countRounds; i += 1) {
+  for (let i = 0; i < numbers.countRounds; i += 1) {
+    let expression;
+    let correctAnswer;
+
     switch (type) {
       case typeGames.EVEN:
         [expression, correctAnswer] = evenGame();
@@ -45,10 +39,12 @@ export default (type) => {
     console.log(`Question: ${expression}`);
 
     const answer = readlineSync.question('Your answer: ');
-    const result = isEqual(answer, correctAnswer);
 
-    showMessage(result, userName, answer, correctAnswer);
-    if (!result) return;
+    if (answer === correctAnswer) console.log('Correct!');
+    else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      return;
+    }
   }
   console.log(`Congratulations, ${userName}!`);
 };
