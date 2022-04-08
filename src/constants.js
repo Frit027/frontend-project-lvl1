@@ -6,4 +6,19 @@ export const typeGames = {
   PRIME: 'PRIME',
 };
 
-export const countRounds = 3;
+export const numbers = {
+  countRounds: 3,
+  rangeStart: 1,
+  rangeEnd: 100,
+};
+
+export const progression = {
+  dStart: 1,
+  dEnd: 10,
+  firstNumberStart: 1,
+  firstNumberEnd: 15,
+  lengthStart: 5,
+  lengthEnd: 10,
+};
+
+export const operators = ['+', '-', '*'];
