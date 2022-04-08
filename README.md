@@ -28,5 +28,5 @@
 1. Игра ["Проверка на чётность"](https://drive.google.com/file/d/1SYo-L2yxF4_oUoUPyyN2MhNrsrF-YGg7/view?usp=sharing).
 2. Игра ["Калькулятор"](https://drive.google.com/file/d/1tpVpi2bZ-eD9ZKvdxAdAz2yCm6HeALMy/view?usp=sharing).
 3. Игра ["НОД"](https://drive.google.com/file/d/1cKAwqtl7GRNV2VrLoxwUZAA1gWYb8tJK/view?usp=sharing).
-4. Игра ["Арифметическая прогрессия"](https://drive.google.com/file/d/11VJClKSWZZQu4IGapU6sIyPZTP9dI0Jj/view?usp=sharing).
+4. Игра ["Арифметическая прогрессия"](https://drive.google.com/file/d/1HRIwZcEFI9oKWLtgJq8Kk24Z8FTrgXGb/view?usp=sharing).
 5. Игра ["Простое ли число?"](https://drive.google.com/file/d/1tcOl_KdRqgPg438nHqle79WMANlxuKke/view?usp=sharing).
