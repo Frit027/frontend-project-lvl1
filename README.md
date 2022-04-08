@@ -1,7 +1,27 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Frit027/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Frit027/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Actions Status](https://github.com/Frit027/frontend-project-lvl1/workflows/lint-check/badge.svg)](https://github.com/Frit027/frontend-project-lvl1/actions/workflows/lint-check.yml)
+
+# Описание
+Проект представляет собой консольную программу с 5-ью математическими играми, каждая из которых состоит из трёх вопросов. 
+При верном ответе на все вопросы игра заканчивается. Ошибка в ответе также приводит к концу игры.
+
+# Минимальные требования
+- Node.js v16.14.0 или выше;
+- установленный пакет [make](https://www.npmjs.com/package/make).
+
+# Инструкция по установке и запуску
+- клонировать репозиторий;
+- выполнить команды:
+  - make install;
+  - make publish;
+  - npm link.
+- для запуска любой из игр набрать её название в консоли:
+  - brain-even;
+  - brain-calc;
+  - brain-gcd;
+  - brain-prime;
+  - brain-progression.
 
 # Демонстрация
 Ссылки на видео с примером прохождения каждой из игр:
