@@ -10,9 +10,7 @@ const rangeEnd = 100;
 const getRandomOperator = () => operators[getRandNum(0, operators.length - 1)];
 
 const getQuestionWithAnswer = () => {
-  const a = getRandNum(rangeStart, rangeEnd);
-  const b = getRandNum(rangeStart, rangeEnd);
-  const expression = `${a} ${getRandomOperator()} ${b}`;
+  const expression = `${getRandNum(rangeStart, rangeEnd)} ${getRandomOperator()} ${getRandNum(rangeStart, rangeEnd)}`;
   return [expression, eval(expression).toString()]; // eslint-disable-line no-eval
 };
 
