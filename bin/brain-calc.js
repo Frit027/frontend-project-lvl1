@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import startGame from '../src/index.js';
-import { typeGames } from '../src/constants.js';
+import startGame from '../src/games/calc.js';
 
-startGame(typeGames.CALC);
+startGame();
